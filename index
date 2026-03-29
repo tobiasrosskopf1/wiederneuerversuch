@@ -94,15 +94,15 @@
 <!-- Top Navigation Bar -->
 <nav class="fixed top-0 w-full z-50 border-b border-white/10 glass-nav">
 <div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
-<div class="text-xl font-headline font-bold tracking-tighter drop-shadow-md text-white/90"><a class="flex items-center gap-3" href="#">
+<div class="text-xl font-headline font-bold tracking-tighter drop-shadow-md text-white/90"><a class="flex items-center gap-3" href="index.html">
 <img alt="Paparossi Logo" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uiX39F_4KUlsyj6cdZHi1EXM5YfjmRhn9zLriPhn4zUuO_5s4iTNA3F1dT8Jz4S9pEZLGZTsz46Aach-fMKxPTTmnAdIS11vwU3SKeRe-hzG1g2sgGQwNAJBF3FZAcjcj6ko9FG5dOJGu9hlSvkM5-Eyf1GG0ZjvQ0ZcnBMKTzY44_5FiakwpJld2dHG6pTJKKdSY4Nv0tfx0FFiXVIW-cbIoga_ULX5VepqpQ1665z-sUTCXuM9Xfhafn06lpptu8rspG08lH0TQ"/>
 <span class="hidden sm:inline-block">Fotoboxverleih Roßkopf</span>
 </a></div>
 <div class="hidden md:flex gap-8 items-center">
-<a class="font-headline font-medium tracking-tight text-sm text-white/90 border-b-2 border-primary pb-1 transition-colors duration-300" href="#">Startseite</a>
-<a class="font-headline font-medium tracking-tight text-sm text-white/70 hover:text-white transition-colors duration-300" href="#leistungen">Leistungen &amp; Preise</a>
-<a class="font-headline font-medium tracking-tight text-sm text-white/70 hover:text-white transition-colors duration-300" href="#kontakt">Kontakt</a>
-<a class="font-headline font-medium tracking-tight text-sm text-white/70 hover:text-white transition-colors duration-300" href="#rechtliches">Rechtliches</a>
+<a class="font-headline font-medium tracking-tight text-sm text-white/90 border-b-2 border-primary pb-1 transition-colors duration-300" href="index.html">Startseite</a>
+<a class="font-headline font-medium tracking-tight text-sm text-white/70 hover:text-white transition-colors duration-300" href="#leistungen.html">Leistungen &amp; Preise</a>
+<a class="font-headline font-medium tracking-tight text-sm text-white/70 hover:text-white transition-colors duration-300" href="#kontakt.html">Kontakt</a>
+<a class="font-headline font-medium tracking-tight text-sm text-white/70 hover:text-white transition-colors duration-300" href="#rechtliches.html">Rechtliches</a>
 </div>
 <button class="bg-gradient-to-br from-primary to-primary-container text-on-primary font-label text-xs uppercase tracking-widest font-bold py-3 px-8 rounded-full shadow-lg scale-95 active:scale-90 transition-transform">
                 Jetzt anfragen
