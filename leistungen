@@ -1,0 +1,337 @@
+<html class="light" lang="de"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+          tailwind.config = {
+            darkMode: "class",
+            theme: {
+              extend: {
+                colors: {
+                  "on-primary-container": "#fad389",
+                  "secondary-fixed-dim": "#e7c179",
+                  "inverse-on-surface": "#f3f0ea",
+                  "surface-variant": "#e5e2dc",
+                  "surface-tint": "#765a1c",
+                  "outline": "#7f7667",
+                  "background": "#fcf9f3",
+                  "tertiary": "#2e476f",
+                  "on-secondary-container": "#795c1e",
+                  "surface-container-high": "#ebe8e2",
+                  "on-tertiary-fixed": "#001b3d",
+                  "on-background": "#1c1c18",
+                  "surface-container-low": "#f6f3ed",
+                  "surface-dim": "#dcdad4",
+                  "error": "#ba1a1a",
+                  "on-error-container": "#93000a",
+                  "on-error": "#ffffff",
+                  "surface-container-lowest": "#ffffff",
+                  "secondary-fixed": "#ffdea3",
+                  "on-tertiary": "#ffffff",
+                  "inverse-surface": "#31312d",
+                  "on-secondary-fixed": "#261900",
+                  "tertiary-fixed": "#d6e3ff",
+                  "surface-container-highest": "#e5e2dc",
+                  "secondary": "#765a1c",
+                  "error-container": "#ffdad6",
+                  "primary-container": "#765a1c",
+                  "on-primary": "#ffffff",
+                  "surface-container": "#f0eee8",
+                  "on-surface": "#1c1c18",
+                  "on-secondary": "#ffffff",
+                  "inverse-primary": "#e7c179",
+                  "tertiary-container": "#465f88",
+                  "primary-fixed-dim": "#e7c179",
+                  "outline-variant": "#d1c5b4",
+                  "on-surface-variant": "#4d4639",
+                  "secondary-container": "#ffd88d",
+                  "primary": "#5c4304",
+                  "on-secondary-fixed-variant": "#5c4204",
+                  "on-primary-fixed-variant": "#5c4304",
+                  "tertiary-fixed-dim": "#aec7f6",
+                  "surface": "#fcf9f3",
+                  "primary-fixed": "#ffdea2",
+                  "on-tertiary-fixed-variant": "#2e476f",
+                  "on-tertiary-container": "#c6d9ff",
+                  "on-primary-fixed": "#261900",
+                  "surface-bright": "#fcf9f3"
+                },
+                fontFamily: {
+                  "headline": ["Plus Jakarta Sans"],
+                  "body": ["Inter"],
+                  "label": ["Inter"]
+                },
+                borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+              },
+            },
+          }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 20px 40px rgba(121, 92, 30, 0.06);
+        }
+        .glass-nav {
+            background-color: rgba(252, 249, 243, 0.7);
+            backdrop-filter: blur(20px);
+        }
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.4) 100%);
+        }
+        .product-image-filter {
+            filter: contrast(1.05) brightness(1.02) saturate(1.1);
+        }
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+            transform: translateY(-100%);
+        }
+        #mobile-menu.active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 border-b border-outline-variant/20 glass-nav">
+<div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto relative z-50 bg-transparent">
+<div class="text-xl font-headline font-bold tracking-tighter text-primary"><a class="flex items-center gap-3" href="#">
+<img alt="Fotoboxverleih Roßkopf Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ugww_uLbk0RENYnVNH5wB4WO_bTMGiz-a8iU4gT30yAdqnbDKGVm7iSl1YpDz3mSKHfGwe9QAijWmJnhu7OwDeIKee36Vkqq8_j8kmi9oH9TYrkPhTzEv4I0-wXvE_TwCGbYjCDXsbUwgTtDMF7Mm4_A5F-XbAnDmA62vFvd8NhwyOuGns5GOIQxDVMDkF6OzZLCyVLSikucASTb3lPZHmYi0ft-uPCwm1Cs9BHR5gLFDUGCHsRiWsA_tvvPhZSWWCz038KC9Ucyg"/>
+<span class="font-headline font-bold text-lg tracking-tight text-primary uppercase">Fotoboxverleih Roßkopf</span>
+</a></div>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex items-center gap-10 font-headline font-medium tracking-tight text-sm">
+<a class="text-secondary/70 hover:text-primary transition-colors duration-300" href="#">Startseite</a>
+<a class="text-primary border-b-2 border-secondary pb-1" href="#">Leistungen &amp; Preise</a>
+<a class="text-secondary/70 hover:text-primary transition-colors duration-300" href="#">Kontakt</a>
+<a class="text-secondary/70 hover:text-primary transition-colors duration-300" href="#footer">Rechtliches</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden sm:block bg-gradient-to-br from-primary to-primary-container text-on-primary font-label text-xs font-bold uppercase tracking-widest px-6 py-3 rounded-full scale-95 active:scale-90 transition-transform">
+                Jetzt anfragen
+            </button>
+<!-- Hamburger Menu Button -->
+<button aria-label="Menu" class="md:hidden p-2 text-primary focus:outline-none" id="menu-toggle">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+<!-- Mobile Navigation Overlay -->
+<div class="fixed inset-x-0 top-0 bg-background/95 backdrop-blur-xl border-b border-outline-variant/20 pt-24 pb-8 px-8 md:hidden shadow-xl" id="mobile-menu">
+<nav class="flex flex-col gap-6 font-headline font-bold text-lg tracking-tight">
+<a class="text-secondary/70" href="#" onclick="toggleMenu()">Startseite</a>
+<a class="text-primary" href="#" onclick="toggleMenu()">Leistungen &amp; Preise</a>
+<a class="text-secondary/70" href="#" onclick="toggleMenu()">Kontakt</a>
+<a class="text-secondary/70" href="#footer" onclick="toggleMenu()">Rechtliches</a>
+<hr class="border-outline-variant/30 my-2"/>
+<button class="w-full bg-gradient-to-br from-primary to-primary-container text-on-primary font-label text-sm font-bold uppercase tracking-widest py-4 rounded-full">
+                Jetzt anfragen
+            </button>
+</nav>
+</div>
+</header>
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = menuToggle.querySelector('.material-symbols-outlined');
+
+    function toggleMenu() {
+        mobileMenu.classList.toggle('active');
+        if (mobileMenu.classList.contains('active')) {
+            menuIcon.textContent = 'close';
+            document.body.style.overflow = 'hidden';
+        } else {
+            menuIcon.textContent = 'menu';
+            document.body.style.overflow = '';
+        }
+    }
+
+    menuToggle.addEventListener('click', toggleMenu);
+</script>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[85vh] min-h-[600px] overflow-hidden mb-0">
+<!-- Background Image with Logo Area Masked -->
+<div class="absolute inset-0">
+<img alt="Paparossi Fotoboxen Kollektion" class="w-full h-full object-cover object-top" src="https://lh3.googleusercontent.com/aida/ADBb0uh5vPLqJtipxF7T1AFRi0JoVQbXyrTr4y3Qj-mYbip4EatdjFF2u-92WmXaPLEXSL7TXOaDYZFePDZ851KvgyzImRE-tZpkNfxIvY0Mcl3lQb3-daAvXbhkFiW2hdvMW_gGT5ci3gLcjOuV-u7KQ6gDLZOJLhw_dlqBvQPb0Koi-9boQSffXtIJ5zdQhQ8UolHSp8cMGtW1N_z5EH6jI1_7s3AGFFSY2ruc1mPlmKaQ25EOFVS2EiWc6wkaTebj7wKs_Gc_HwOkrw"/>
+<!-- Dark Overlay and Gradual Mask to hide the logo in the top right -->
+<div class="absolute inset-0 bg-black/30"></div>
+<div class="absolute inset-0 bg-gradient-to-l from-black/80 via-black/10 to-transparent"></div>
+</div>
+<!-- Content -->
+<div class="relative h-full px-8 max-w-screen-2xl mx-auto flex flex-col justify-center">
+<div class="max-w-3xl">
+<span class="font-label text-xs uppercase tracking-[0.2em] text-white/90 mb-4 block drop-shadow-md">Exklusive Erinnerungen</span>
+<h1 class="font-headline text-5xl md:text-8xl font-extrabold tracking-tighter leading-none text-white mb-8 drop-shadow-2xl">
+                    Leistungen <br/> <span class="ml-12 md:ml-24 italic font-light text-secondary-fixed"> &amp; </span> Technik
+                </h1>
+<p class="font-body text-lg md:text-2xl text-white/95 leading-relaxed max-w-xl drop-shadow-md font-medium">
+                    Wir vereinen hochwertige Technik mit einem nahtlosen Erlebnis für Ihre Gäste. Entdecken Sie unsere kuratierten Pakete für Hochzeiten, Firmenevents und private Feiern.
+                </p>
+</div>
+</div>
+</section>
+<!-- Included Services: Minimalist Grid -->
+<section class="bg-surface-container py-24 px-8 mb-32">
+<div class="max-w-screen-2xl mx-auto">
+<div class="mb-16">
+<h2 class="font-headline text-3xl font-bold text-primary tracking-tight">Immer inklusive</h2>
+<div class="h-1 w-24 bg-primary mt-4"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="p-8 bg-surface-container-lowest rounded-xl border border-outline-variant/10 hover:border-primary/20 transition-all">
+<span class="material-symbols-outlined text-primary mb-4 text-3xl">cloud_done</span>
+<h3 class="font-headline text-lg font-bold mb-2">Digital-Flatrate</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Alle Fotos des Abends in voller Auflösung direkt digital gespeichert.</p>
+</div>
+<div class="p-8 bg-surface-container-lowest rounded-xl border border-outline-variant/10 hover:border-primary/20 transition-all">
+<span class="material-symbols-outlined text-primary mb-4 text-3xl">photo_library</span>
+<h3 class="font-headline text-lg font-bold mb-2">Online-Galerie</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Passwortgeschützter Zugang für Sie und Ihre Gäste zum Downloaden.</p>
+</div>
+<div class="p-8 bg-surface-container-lowest rounded-xl border border-outline-variant/10 hover:border-primary/20 transition-all">
+<span class="material-symbols-outlined text-primary mb-4 text-3xl">theater_comedy</span>
+<h3 class="font-headline text-lg font-bold mb-2">Profi-Requisiten</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Hochwertige Accessoires, die über das übliche Papp-Sortiment hinausgehen.</p>
+</div>
+<div class="p-8 bg-surface-container-lowest rounded-xl border border-outline-variant/10 hover:border-primary/20 transition-all">
+<span class="material-symbols-outlined text-primary mb-4 text-3xl">local_shipping</span>
+<h3 class="font-headline text-lg font-bold mb-2">Aufbau-Service</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Wir kümmern uns um die Technik, damit Sie sich um Ihre Gäste kümmern können.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Tiles Grid -->
+<section class="py-32 px-8">
+<div class="max-w-screen-2xl mx-auto">
+<div class="mb-16">
+<span class="font-label text-xs uppercase tracking-[0.3em] text-secondary mb-4 block">Ausstattungsdetails</span>
+<h2 class="font-headline text-4xl font-extrabold text-primary tracking-tight">Paketoptionen &amp; Add-ons</h2>
+<div class="h-1 w-24 bg-primary mt-4"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+<!-- 1. Unsere Fotoboxen -->
+<div class="group">
+<div class="aspect-[4/3] bg-surface-container-high rounded-xl overflow-hidden mb-6 editorial-shadow relative border border-outline-variant/20">
+<img alt="Unsere Fotoboxen" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 product-image-filter" src="https://lh3.googleusercontent.com/aida/ADBb0ui7WCYX_zTQoXKoojE9ByLGybm16HI5XdoQHSmLW5RxSUsQzwM60tp5jNlItfDa-zI3VpFIw_hMAMj8zHj9N4lQfE7U1oSf3zOwnOnv0pAd__eaiKDSstqhE00gdI2-gF5pImNO4l8pNAhsakd4YRxUeuhbx-IrvsCAi5x6_CIGmmjKHLFWVtFmFKIRQFlrYdmA4lTthgNTQKRkvRYMqxEKHFozPhczPGTTbfi329QFfvfjjkUqBdZiW9ruXJVK_ESjIbnXoNIS6g"/>
+<div class="absolute bottom-4 right-4 bg-primary/90 backdrop-blur-md text-on-primary px-4 py-2 rounded-lg font-headline font-bold">ab 175€</div>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary mb-3">Unsere Fotoboxen</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm mb-4">
+                        High-End Hardware mit Canon Spiegelreflexkameras und Studioblitzen für Bilder auf Profi-Niveau. Intuitiv bedienbar via Touchscreen.
+                    </p>
+</div>
+<!-- 2. Fotorequisiten -->
+<div class="group">
+<div class="aspect-[4/3] bg-surface-container-high rounded-xl overflow-hidden mb-6 editorial-shadow relative border border-outline-variant/20">
+<img alt="Fotorequisiten" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 product-image-filter" src="https://lh3.googleusercontent.com/aida/ADBb0ujK2WPHD7EAWOpEYq9x-0sen-ObqqHGYM6MSgvYr8TBIo73PWVxacuJIipxy25fGm0kCseO1iEr0sfmLI745iCw1bNQkEmwLo2w6nO3gBorKao3qPZW0J1J7b7ga0HK1AIsOHh1xJSoZk9FdvGjPtiw2Ta-omU1pmbvPSbPRPSVzAdoT3pW0JntPMOB4vp3K7EPq7pRj-lnAPHQkilCw0Lj-u2y9ohIJl_W83gf-YKih9GjvgzCOkP12uY0jNtKd8MV8OtgFpReoA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-white/60 pointer-events-none mix-blend-overlay"></div>
+<div class="absolute bottom-4 right-4 bg-primary/90 backdrop-blur-md text-on-primary px-4 py-2 rounded-lg font-headline font-bold">inklusive</div>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary mb-3">Fotorequisiten</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm mb-4">
+                        Kuratierte Auswahl an hochwertigen Accessoires wie edlen Hüten und Vintage-Brillen statt billiger Papp-Schilder.
+                    </p>
+</div>
+<!-- 3. Fotohintergründe -->
+<div class="group">
+<div class="aspect-[4/3] bg-surface-container-high rounded-xl overflow-hidden mb-6 editorial-shadow relative border border-outline-variant/20">
+<img alt="Fotohintergründe" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 product-image-filter" src="https://lh3.googleusercontent.com/aida/ADBb0ugsgt74xd6kHz1raZFeT73Avv-xrHQkO9YLcLnWf687VmjASjxzIa9jWEvLWLgNjt6u5ClhJdZafq1b03g1gZtDcXoYjfXYK5PdGCyGzeJr8cwOLnk0tJ3cgy_Zq3C9_QO5f5EkqaG2sQORDFQ2vJyEDJaa8V5gzZ1pb8G7M0KdjYQ6k-a3x04YL3mSKblyHrwgyRW0-ePnQWM-IudJAP9KbKK3ggCbs67QOkpPBEK4dMQSv1iiLidKEmIDSJfYbtAPzGJsUHRFfA"/>
+<div class="absolute bottom-4 right-4 bg-primary/90 backdrop-blur-md text-on-primary px-4 py-2 rounded-lg font-headline font-bold">ab 25€</div>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary mb-3">Fotohintergründe</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm mb-4">
+                        Stabile Hintergrundsysteme in verschiedenen Looks – von Editorial-Clean bis rustikalem Holz-Print.
+                    </p>
+</div>
+<!-- 4. Audio Gästebuch -->
+<div class="group">
+<div class="aspect-[4/3] bg-surface-container-high rounded-xl overflow-hidden mb-6 editorial-shadow relative border border-outline-variant/20">
+<img alt="Audio Gästebuch" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 product-image-filter" src="https://lh3.googleusercontent.com/aida/ADBb0ug0LzkWYFKj5nz4DNCjQ1ht-NgZ_Eopg3SdF8j36i3jqV_7lxuZ0Ab6k2hyFU4TRnN65UKyYdAAULXalGfePHP2ik6P0Q8noQSjUw3XFRWSAI_0OeILvmkP8gyHNz2-CoSkJX80A0_5lNoqb713VTGKG_bvJnYGDkbdW0umqZmuMxVO_JYHoFCCYBJtX4uJjv2RnAcsjPtvbNLegeg0BLRgYJHyn75QvNETLPCL3u2N0RUPGiCwgeAMMJenRDWQGs3R5OTeAX_K"/>
+<div class="absolute inset-0 bg-gradient-to-bl from-white/90 via-transparent to-transparent h-1/4 w-1/4 right-0 pointer-events-none"></div>
+<div class="absolute bottom-4 right-4 bg-primary/90 backdrop-blur-md text-on-primary px-4 py-2 rounded-lg font-headline font-bold">ab 40€</div>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary mb-3">Audio Gästebuch</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm mb-4">
+                        Vintage-Telefon fängt emotionale Sprachnachrichten Ihrer Gäste ein. Eine bleibende Erinnerung für die Ohren.
+                    </p>
+</div>
+<!-- 5. Sofortbildkamera -->
+<div class="group">
+<div class="aspect-[4/3] bg-surface-container-high rounded-xl overflow-hidden mb-6 editorial-shadow relative border border-outline-variant/20">
+<img alt="Sofortbildkamera" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 product-image-filter" src="https://lh3.googleusercontent.com/aida/ADBb0uikOIkDuEKpnjA7JYfjZb15kvxYiqvLW8_2JtaPGxha-saJsfZc4Ra-DReERo_GGKfJrauJw-FjUQnORt0OGG8Ij-DcMbk2J2ZjKMnXgNktOJ6DUzy3gd07nEnw2g7WRflFdPSLVYBYIQhudMmL850ws8b0G4ZLWgkoi8IqC6J8Nbpv-_gxLzTJoqpCPcgI-kQcTN0R8FuMb-8pkINjHGjk4jnZqM__1wQfRzp2LdVbByE83ojLmmEzBT-XQOa1tu5JLZRIoGC2JA"/>
+<div class="absolute bottom-4 right-4 bg-primary/90 backdrop-blur-md text-on-primary px-4 py-2 rounded-lg font-headline font-bold">ab 25€</div>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary mb-3">Sofortbildkamera</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm mb-4">
+                        Klassischer Retroschick für haptische Fotomomente. Ideal für spontane Schnappschüsse direkt in die Hand.
+                    </p>
+</div>
+<!-- 6. Individuelle Drucklayouts -->
+<div class="group">
+<div class="aspect-[4/3] bg-surface-container-high rounded-xl overflow-hidden mb-6 editorial-shadow relative border border-outline-variant/20">
+<img alt="Individuelle Drucklayouts" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 product-image-filter" src="https://lh3.googleusercontent.com/aida/ADBb0ugXtOM-EJFDFUIemsePUAZ6Tf2B2FSZGrFEBUy26KRLx_1WFDavfb9o-0Pj2HrsOlFEKr6hiX-6s_-aQwgDbTgCTwnbLH7NmcCR_RjOH1VZI2HT96FvDAC8pUGWap3GKboS5DyviyAbk0G3J2xwFYl6oWUVoHhYOf4SZiEdUFCBY01wHopR4y7Y5jyEWOQUIXToEyAbroWM22-6Aw1r0kSG6w5kYnnnvgY1d6VVHh3Y3oTAqrGZPjJ0D7bzp3m26GbNG0FjGn73UA"/>
+<div class="absolute bottom-4 right-4 bg-primary/90 backdrop-blur-md text-on-primary px-4 py-2 rounded-lg font-headline font-bold">ab 10€</div>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary mb-3">Individuelle Layouts</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm mb-4">
+                        Maßgeschneiderte Designs für Ihre Foto-Ausdrucke, passend zu Einladungen oder Corporate Branding.
+                    </p>
+</div>
+<!-- 7. Fotodrucker -->
+<div class="group">
+<div class="aspect-[4/3] bg-surface-container-high rounded-xl overflow-hidden mb-6 editorial-shadow relative border border-outline-variant/20">
+<img alt="Fotodrucker" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 product-image-filter" src="https://lh3.googleusercontent.com/aida/ADBb0uiU3oyT794V_N87CbUzEvcBmDJX9SRZyyVeTuYSL7ZuxQs1HQUoRuEuqJgr91XvY0FSBNX1Qd3FDW8VEc1yi_99hN-xgU-uRNrghj9fAqKe3Vp-8pxVbBNMeReKfoGCqs9xlyMDtMCFFgdy7DfQbYrnF-vJPv9cmM2EFtpuhZgAfaDXpJBnrL7QhVtF_DZxDRV5QWBOFLUTKz0ZnBbLhXC_qdavQr6PWv5PeiX3X0RDBSBVKNV4EFdYjiQQo5huwpz50MsK2Joy4A"/>
+<div class="absolute bottom-4 right-4 bg-primary/90 backdrop-blur-md text-on-primary px-4 py-2 rounded-lg font-headline font-bold">ab 50€</div>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary mb-3">Fotodrucker</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm mb-4">
+                        Hochgeschwindigkeits-Thermosublimationsdrucker für sofortige Erinnerungen in Laborqualität. In Sekunden gedruckt.
+                    </p>
+</div>
+<!-- 8. Fotoboxaufgaben -->
+<div class="group">
+<div class="aspect-[4/3] bg-surface-container-high rounded-xl overflow-hidden mb-6 editorial-shadow relative border border-outline-variant/20">
+<img alt="Fotoboxaufgaben" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 product-image-filter" src="https://lh3.googleusercontent.com/aida/ADBb0ui1d3papUs_h1c0H3Yeu5gpBmaFInHeWbz0Uwj41wKIKwf7A-xgLNsYE63nureLvhigOhXN7jHzN3lsQ3pvgycWgMlo5wW2D6X63KzLycqvO6oi0ViTnWZW6BOkPZ132inb8tfX7SxZOPT9z2Z2Hbsju2slNa-6apNezQTc9G90EQTIzUTlDH6DAPsYLY-nYjRcN9hDF9BEvKhj71UNb5_C2bZBqI16hPzheQu7D3Qx_PTEhfAhIEruTh9FELQqkWkPfXYGFa-I1A"/>
+<div class="absolute bottom-4 right-4 bg-primary/90 backdrop-blur-md text-on-primary px-4 py-2 rounded-lg font-headline font-bold">ab 10€</div>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary mb-3">Fotoboxaufgaben</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm mb-4">
+                        Kreative Aufgabenkarten, die das Eis brechen und für lustige, spontane Interaktionen vor der Kamera sorgen.
+                    </p>
+</div>
+<!-- 9. Weiteres Zubehör -->
+<div class="group">
+<div class="aspect-[4/3] bg-surface-container-high rounded-xl overflow-hidden mb-6 editorial-shadow relative border border-outline-variant/20">
+<img alt="Weiteres Zubehör" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 product-image-filter" src="https://lh3.googleusercontent.com/aida/ADBb0uhqIiYiCsC0cM1VT53FHl8vnjCEm4Klfi49Ho0i3Z22mt0fiD9DRm9cBRGSKYmikzBJK0YQRj6m8iqOj9BHShMSwNJZdJcbEd_GGP7rxjraXi-ek-yTjW1mzhBrPCM418QE9Bm7ILJC1BQCQ4_D17vCjihrtLek7T1g6pt27kxj97J92wGDklyCSDYfvW-f7VPffI9cp4dt4J1OjR5zt-s5oTrdKulzhh9vh4Q5dwbRZCRLoETf138xp4eJQ4KRgmGe-znMy8hVXQ"/>
+<div class="absolute inset-0 bg-gradient-to-bl from-white/95 via-transparent to-transparent h-1/4 w-1/3 right-0 pointer-events-none"></div>
+<div class="absolute bottom-4 right-4 bg-primary/90 backdrop-blur-md text-on-primary px-4 py-2 rounded-lg font-headline font-bold">Auf Anfrage</div>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary mb-3">Weiteres Zubehör</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm mb-4">
+                        Von LED-Beleuchtung über Event-Teppiche bis hin zu personalisierten Gästebüchern – alles für das perfekte Event.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container w-full py-12 px-8" id="footer">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-screen-2xl mx-auto">
+<div class="font-headline font-bold text-primary"><img alt="Fotoboxverleih Roßkopf Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uiX39F_4KUlsyj6cdZHi1EXM5YfjmRhn9zLriPhn4zUuO_5s4iTNA3F1dT8Jz4S9pEZLGZTsz46Aach-fMKxPTTmnAdIS11vwU3SKeRe-hzG1g2sgGQwNAJBF3FZAcjcj6ko9FG5dOJGu9hlSvkM5-Eyf1GG0ZjvQ0ZcnBMKTzY44_5FiakwpJld2dHG6pTJKKdSY4Nv0tfx0FFiXVIW-cbIoga_ULX5VepqpQ1665z-sUTCXuM9Xfhafn06lpptu8rspG08lH0TQ"/></div>
+<div class="flex flex-wrap justify-center gap-8 font-body text-sm text-secondary/60">
+<a class="hover:text-primary underline transition-all" href="#">Impressum</a>
+<a class="hover:text-primary underline transition-all" href="#">Datenschutz</a>
+<a class="hover:text-primary underline transition-all" href="#">AGB</a>
+</div>
+<div class="font-body text-sm text-secondary/60">
+            © 2024 Fotoboxverleih Roßkopf. Alle Rechte vorbehalten.
+        </div>
+</div>
+</footer>
+</body></html>
